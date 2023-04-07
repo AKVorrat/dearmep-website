@@ -39,9 +39,11 @@ jobs:
       - name: Run install
         uses: borales/actions-yarn@v4
         with:
-          cmd: build # will run `yarn install` command
+          cmd: install # will run `yarn install` command
       - name: Build page
         uses: borales/actions-yarn@v4
+        with:
+          cmd: build # will run `yarn install` command
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
