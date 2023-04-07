@@ -1,0 +1,48 @@
+.wrap.container-fluid {
+  padding: 0;
+
+  > .content {
+    // padding: 0;
+  }
+}
+
+.frame-indent {
+  .container-xxl {
+    @include media-breakpoint-up(md) {
+      padding-left: 16%;
+      padding-right: 16%;
+    }
+  }
+}
+
+.frame {
+  background-size: 170% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include media-breakpoint-up(md) {
+      background-size: auto 100%;
+  }
+  
+  @each $key, $value in $gutters {
+    &.frame-space-before-#{$key} {
+      padding-top: $value * 7;
+    }
+
+    &.frame-space-after-#{$key} {
+      padding-bottom: $value * 7;
+    }
+  }
+
+  @each $color, $value in $theme-colors {
+    &.frame-#{$color} {
+      background-color: $value;
+      color: color-contrast($value);
+      fill: color-contrast($value);
+
+      a, a:hover, a:active, a:focus {
+        color: color-contrast($value);
+      }
+    }
+  }
+}

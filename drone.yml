@@ -1,0 +1,80 @@
+kind: pipeline
+type: docker
+name: build and deploy
+
+volumes:
+  - name: cache
+    host:
+      path: /tmp/cache
+
+steps:
+- name: cache key
+  image: ubuntu
+  commands:
+  - echo -n $(md5sum package.json) > .cache_key
+
+- name: restore-cache
+  image: drillster/drone-volume-cache
+  volumes:
+    - name: cache
+      path: /cache
+  settings:
+    restore: true
+    mount:
+      - ./node_modules
+
+- name: build
+  image: klakegg/hugo:0.92.2-ext-ubuntu
+  environment:
+    HUGO_ENVIRONMENT: stage
+  commands:
+  - yarn install --frozen-lockfile
+  - yarn build
+
+- name: rebuild-cache
+  image: drillster/drone-volume-cache
+  volumes:
+    - name: cache
+      path: /cache
+  settings:
+    rebuild: true
+    mount:
+      - ./node_modules
+
+- name: webp
+  image: elswork/cwebp
+  commands:
+  - |
+    cd public
+    mkdir webp
+    for image in $(find -type f \( -name '*.jpeg' -o -name '*.jpg' -o -name '*.png' \)); do
+      echo "Convert $image"
+      mkdir -p "webp/$(dirname $image)"
+      cwebp "$image" -o "webp/$image.webp" 2>/dev/null;
+    done
+    cd ..
+
+trigger:
+  event:
+  - push
+
+---
+kind: pipeline
+type: docker
+name: deploy
+
+steps:
+- name: build
+  image: node
+  environment:
+    HUGO_ENVIRONMENT: production
+  commands:
+  - yarn install --frozen-lockfile
+  - yarn build
+
+trigger:
+  event:
+  - promote
+  target:
+  - production
+

@@ -1,0 +1,81 @@
+<form class="contact" action="{{ $.Site.Params.apiEndpoint }}/contact/email">
+  <div class="row">
+    <div class="col-12 col-sm-6 mb-3">
+      <div class="input-group flex-nowrap">
+        <div class="form-floating flex-grow-1">
+          <input name="name" type="text" id="input-name" class="form-control" placeholder="{{ i18n "contactName" }}" aria-label="{{ i18n "contactName" }}" maxlength="255" required>
+          <label for="input-name">{{ i18n "contactName" }}*</label>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 mb-3">
+      <div class="input-group flex-nowrap">
+        <div class="form-floating flex-grow-1">
+          <input name="company" type="text" id="input-company" class="form-control" placeholder="{{ i18n "contactCompany" }}" aria-label="{{ i18n "contactCompany" }}" maxlength="255">
+          <label for="input-company">{{ i18n "contactCompany" }}</label>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 mb-3">
+      <div class="input-group flex-nowrap">
+        <div class="form-floating flex-grow-1">
+          <input name="email" type="email" id="input-email" class="form-control" placeholder="{{ i18n "contactEmail" }}" aria-label="{{ i18n "contactEmail" }}" maxlength="255" required>
+          <label for="input-email">{{ i18n "contactEmail" }}*</label>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 mb-3">
+      <div class="input-group flex-nowrap">
+        <div class="form-floating flex-grow-1">
+          <input name="phone" type="text" id="input-phone" class="form-control" placeholder="{{ i18n "contactPhone" }}" aria-label="{{ i18n "contactPhone" }}" maxlength="50">
+          <label for="input-phone">{{ i18n "contactPhone" }}</label>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-12 mb-3">
+      <div class="input-group flex-nowrap">
+        <div class="form-floating flex-grow-1">
+          <textarea name="message" type="text" id="input-message" class="form-control" placeholder="{{ i18n "contactMessage" }}" aria-label="{{ i18n "contactMessage" }}" style="height: 100px" required></textarea>
+          <label for="input-message">{{ i18n "contactMessage" }}*</label>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-12 mb-3 text-end">
+      <button type="submit" class="btn btn-primary">{{ i18n "contactSend" }}</button>
+    </div>
+  </div>
+</form>
+<script>
+let contacts = document.getElementsByClassName('contact');
+
+for (let contact of contacts) {
+    contact.onsubmit = function(event) {
+        event.preventDefault();
+        let loadingDiv = document.createElement('div');
+        loadingDiv.setAttribute('id', 'loading');
+        document.body.appendChild(loadingDiv);
+
+        const formData = new FormData(event.target);
+        const data = {};
+
+        formData.forEach((value, key) => {
+          if (value !== "") {
+            data[key] = value;
+          }
+        });
+
+        let xhr = new XMLHttpRequest()
+        xhr.open('POST', event.target.action, true)
+        xhr.setRequestHeader('Content-type', 'application/json')
+        xhr.setRequestHeader('Accept', 'application/json')
+        xhr.send(JSON.stringify(data));
+         
+        xhr.onload = function () {
+          if(xhr.status === 201) {
+              event.target.parentElement.innerHTML = "<h3>{{ i18n "contactThanksTitle" }}</h3><p>{{ i18n "contactThanksText" }}</p>"
+          }
+          loadingDiv.parentNode.removeChild(loadingDiv);
+        }
+    }
+}
+</script>

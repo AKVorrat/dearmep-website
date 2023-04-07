@@ -1,0 +1,9 @@
+<meta name="theme-color" content="{{ $.Site.Params.themeColor }}">
+{{ $image := resources.Get "images/favicon.png" -}}
+{{ $180 := ($image.Resize "180x180").Permalink -}}
+{{ $32 := ($image.Resize "32x32").Permalink -}}
+{{ $16 := ($image.Resize "16x16").Permalink -}}
+<link rel="apple-touch-icon" sizes="180x180" href="{{ $180 | absURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ $32 | absURL }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ $16 | absURL }}">
+<link rel="manifest" crossorigin="use-credentials" href="/site.webmanifest">

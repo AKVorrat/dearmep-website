@@ -1,0 +1,13 @@
+[en]
+  languageName = "English"
+  weight = 10
+  [en.params]
+    languageISO = "EN"
+
+# [de]
+#   languageName = "German"
+#   weight = 15
+#   [de.params]
+#     languageISO = "DE"
+#     dateFormat = "01-02-2006"
+#     description = "Optiprot Beschreibung"

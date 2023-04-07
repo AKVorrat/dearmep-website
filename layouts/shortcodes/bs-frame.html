@@ -1,0 +1,56 @@
+{{ if .Get "background-image" -}}
+{{ $image := "" -}}
+{{ if (urls.Parse (.Get "background-image")).IsAbs }}
+  {{ $image = resources.GetRemote (.Get "background-image") -}}
+{{ else -}}
+  {{ $image = .Page.Resources.GetMatch (.Get "background-image") -}}
+{{ end -}}
+{{ with $image -}}
+  {{ $lqip := $image.Resize site.Params.lqipWidth -}}
+
+  {{ $imgSrc := "" -}}
+  {{ $imgSrcSet := slice -}}
+
+  {{ $widths := site.Params.backgroundPhotoWidths -}}
+  {{ range $widths -}}
+
+    {{ $srcUrl := "" }}
+    {{ if gt . $image.Width -}}
+      {{ $srcUrl = (printf "%dx605 center" $image.Width | $image.Fill).Permalink -}}
+    {{ else -}}
+      {{ $srcUrl = (printf "%dx605 center" . | $image.Fill).Permalink -}}
+    {{ end -}}
+    {{ if eq $imgSrc "" -}}{{ $imgSrc = $srcUrl -}}{{ end -}}
+    {{ $imgSrcSet = $imgSrcSet | append (printf "%s %dw" $srcUrl .) -}}
+  {{ end -}}
+  {{ $imgSrcSet = (delimit $imgSrcSet ",") -}}
+
+  <div{{ if ($.Get "id") }} id="{{ $.Get "id" }}"{{ end }}
+    class="frame{{ if $.Get "frame" }} frame-{{ $.Get "frame" }}{{ end }} frame-space-before-{{ default "3" ($.Get "space-before") }} frame-space-after-{{ default "3" ($.Get "space-after") }}{{ if $.Get "color" }} frame-{{ $.Get "color" }}{{ end }} lazyload"
+    data-bgset="{{ $imgSrcSet }}"
+    style="
+      background-image: url({{ $lqip.Permalink }});
+    "
+  >
+    <div class="container-xxl">
+      {{- $.Inner -}}
+    </div>
+  </div>
+{{ else -}}
+<div{{ if (.Get "id") }} id="{{ .Get "id" }}"{{ end }}
+  class="frame{{ if .Get "frame" }} frame-{{ .Get "frame" }}{{ end }} frame-space-before-{{ default "3" (.Get "space-before") }} frame-space-after-{{ default "3" (.Get "space-after") }}{{ if .Get "color" }} frame-{{ .Get "color" }}{{ end }}"
+>
+  <div class="container-xxl">
+    {{- .Inner -}}
+  </div>
+</div>
+{{ end -}}
+{{ else -}}
+<div{{ if (.Get "id") }} id="{{ .Get "id" }}"{{ end }}
+  class="frame{{ if .Get "frame" }} frame-{{ .Get "frame" }}{{ end }} frame-space-before-{{ default "3" (.Get "space-before") }} frame-space-after-{{ default "3" (.Get "space-after") }}{{ if .Get "color" }} frame-{{ .Get "color" }}{{ end }}"
+>
+  <div class="container-xxl">
+    {{- .Inner -}}
+  </div>
+</div>
+{{ end -}}

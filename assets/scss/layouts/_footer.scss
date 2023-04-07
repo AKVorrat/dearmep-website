@@ -1,0 +1,26 @@
+.footer {
+  border-top: 1px solid $primary;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
+  background: $secondary;
+  color: color-contrast($secondary) !important;
+
+  a, a:hover, a:focus, a:active {
+    color: color-contrast($secondary) !important;
+  }
+}
+
+.footer ul {
+  margin-bottom: 0;
+}
+
+.footer li {
+  font-size: $font-size-sm;
+  margin-bottom: 0;
+}
+
+@include media-breakpoint-up(md) {
+  .footer li {
+    font-size: $font-size-base;
+  }
+}

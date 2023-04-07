@@ -1,0 +1,14 @@
+<!-- latin 300 -->
+<link rel="preload" as="font" href="{{ "fonts/vendor/roboto/v30/KFOlCnqEu92Fr1MmSU5fBBc4.woff2" | absURL }}" type="font/woff2" crossorigin>
+<!-- latin 500 -->
+<link rel="preload" as="font" href="{{ "fonts/vendor/roboto/v30/KFOlCnqEu92Fr1MmEU9fBBc4.woff2" | absURL }}" type="font/woff2" crossorigin>
+<!-- latin 700 -->
+<link rel="preload" as="font" href="{{ "fonts/vendor/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4.woff2" | absURL }}" type="font/woff2" crossorigin>
+{{ if .Site.Params.options.kaTex -}}
+  <link rel="preload" as="font" href="{{ "fonts/KaTeX_Main-Regular.woff2" | absURL }}" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="{{ "fonts/KaTeX_Math-Italic.woff2" | absURL }}" type="font/woff2" crossorigin>
+{{ end -}}
+{{ $context := . }}
+{{ range $resourceHint := .Page.Params.resourceHints -}}
+  {{ partial "head/image-preload" (dict "context" $context "resourceHint" $resourceHint ) }}
+{{ end -}}

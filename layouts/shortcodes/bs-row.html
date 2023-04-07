@@ -1,0 +1,35 @@
+{{- $classes := slice "row" -}}
+{{- if .Get "cols" -}}
+  {{ $cols := split (.Get "cols") " " }}
+  {{ range $cols }}
+    {{ $classes = $classes | append (printf "row-cols-%s" .) }}
+  {{ end }}
+{{- end -}}
+{{- if .Get "align-items" -}}
+  {{ $classes = $classes | append (printf "align-items-%s" (.Get "align-items")) }}
+{{- end -}}
+{{- if .Get "justify-content" -}}
+  {{ $classes = $classes | append (printf "justify-content-%s" (.Get "justify-content")) }}
+{{- end -}}
+{{- if .Get "g" -}}
+  {{ $g := split (.Get "g") " " }}
+  {{ range $g }}
+    {{ $classes = $classes | append (printf "g-%s" .) }}
+  {{ end }}
+{{- end -}}
+{{- if .Get "gx" -}}
+  {{ $gx := split (.Get "gx") " " }}
+  {{ range $gx }}
+    {{ $classes = $classes | append (printf "gx-%s" .) }}
+  {{ end }}
+{{- end -}}
+{{- if .Get "gy" -}}
+  {{ $gy := split (.Get "gy") " " }}
+  {{ range $gy }}
+    {{ $classes = $classes | append (printf "gy-%s" .) }}
+  {{ end }}
+{{- end -}}
+{{- $classString := delimit $classes " " -}}
+<div class="{{ $classString }}">
+  {{ .Inner }}
+</div>

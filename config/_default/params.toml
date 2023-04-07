@@ -1,0 +1,79 @@
+# Meta Data for SEO
+
+## Homepage
+title = "DearMEP"
+titleSeparator = "-"
+titleAddition = "DearMEP"
+description = "DearMEP"
+
+## Documentation
+# docsVersion = "0.3"
+
+## Open Graph
+images = ["images/logo.png"]
+ogLocale = "en_US"
+domainTLD = "dearmep.io"
+titleHome = "DearMEP"
+
+## Twitter Cards
+
+## JSON-LD
+# schemaType = "Person"
+schemaType = "Organization"
+schemaName = "DearMEP"
+schemaAuthor = "Dominik Polakovics"
+schemaLocale = "en-US"
+schemaLogo = "images/logo.png"
+schemaLogoWidth = 512
+schemaLogoHeight = 512
+schemaImage = "images/logo.png"
+schemaImageWidth = 1280
+schemaImageHeight = 640
+schemaLinkedIn = ""
+schemaSection = "blog"
+
+## Sitelinks Search Box
+siteLinksSearchBox = false
+
+## Chrome Browser
+themeColor = "#fff"
+
+# Images
+quality = 85
+bgColor = "#fff"
+landscapePhotoWidths = [900, 800, 700, 600, 500, 300, 200, 100]
+portraitPhotoWidths = [800, 700, 600, 500, 300, 200, 100]
+backgroundPhotoWidths = [3840, 2500, 1920, 1500, 800, 700, 600, 500]
+lqipWidth = "20x"
+smallLimit = "300"
+
+# Footer
+footer = "Copyright (c) epicenter.works <a href=\"https://creativecommons.org/licenses/by/4.0/\">CC-by 4.0</a><br>Fotocredits: Speechbubbles by <a href=\"https://rawpixel.com\">rawpixel.com</a> on Freepik"
+
+# Feed
+copyRight = "Copyright (c) epicenter.works <a href=\"https://creativecommons.org/licenses/by/4.0/\">CC-by 4.0</a>"
+
+# Edit Page
+# repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster
+
+[options]
+lazySizes = true
+clipBoard = false
+instantPage = true
+flexSearch = true
+darkMode = false
+bootStrapJs = true
+breadCrumb = true
+highLight = true
+kaTex = false
+multilingualMode = false
+docsVersioning = false
+fullWidth = false
+fixedNavbar = true
+icons = true
+matomo = "https://matomo.epicenter.works/js/container_bjSxSYv2.js"
+
+[menu]
+[menu.section]
+auto = true
+collapsibleSidebar = true

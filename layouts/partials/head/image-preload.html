@@ -1,0 +1,41 @@
+{{ $image := "" -}}
+{{ if (urls.Parse .resourceHint.src).IsAbs }}
+  {{ $image = resources.GetRemote .resourceHint.src -}}
+{{ else -}}
+  {{ $image = .context.Page.Resources.GetMatch .resourceHint.src -}}
+{{ end -}}
+{{ with $image -}}
+  {{ $imgSrc := "" -}}
+  {{ $imgSrcSet := slice -}}
+  
+  {{ if strings.HasSuffix $.resourceHint.sizes "px" -}}
+      {{ $width := (int (strings.Replace $.resourceHint.sizes "px" "")) }}
+      {{ $srcUrl := (printf "%dx" $width | $image.Resize).Permalink -}}
+      {{ if eq $imgSrc "" -}}{{ $imgSrc = $srcUrl -}}{{ end -}}
+      {{ $imgSrcSet = $imgSrcSet | append (printf "%s %dw" $srcUrl $width) -}}
+  {{ else -}}
+    {{ $widths := site.Params.landscapePhotoWidths -}}
+    {{ if gt $image.Height $image.Width -}}
+      {{ $widths = site.Params.portraitPhotoWidths -}}
+    {{ end -}}
+
+    {{ range $widths -}}
+      {{ $srcUrl := "" }}
+      {{ if $.resourceHint.background -}}
+        {{ $srcUrl = (printf "%dx605 center" . | $image.Fill).Permalink -}}
+      {{ else -}}
+        {{ $srcUrl = (printf "%dx" . | $image.Resize).Permalink -}}
+      {{ end -}}
+      {{ if eq $imgSrc "" -}}{{ $imgSrc = $srcUrl -}}{{ end -}}
+      {{ $imgSrcSet = $imgSrcSet | append (printf "%s %dw" $srcUrl . ) -}}
+    {{ end -}}
+  {{ end -}}
+
+  {{ $imgSrcSet = (delimit $imgSrcSet ",") -}}
+
+  {{ if gt $image.Width site.Params.smallLimit -}}
+      <link rel="preload" as="image" href="{{ $image.Name }}" {{ printf "imagesrcset=%q" $imgSrcSet | safeHTMLAttr }} sizes="{{ $.resourceHint.sizes }}">
+  {{ end -}}
+{{ else -}}
+  {{ erroridf "image-not-found" (printf "Image %v not found" .src) -}}
+{{ end -}}

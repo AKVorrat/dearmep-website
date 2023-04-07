@@ -1,0 +1,75 @@
+productName:
+  other: Product Name
+vegan:
+  other: Vegan
+calculate:
+  other: Calculate
+alanin:
+  other: Alanin
+arginin: 
+  other: Arginin
+asparagin:
+  other: Asparagin
+cystein:
+  other: Cystein
+glutamin:
+  other: Glutamin
+glycin:
+  other: Glycin
+histidin:
+  other: Histidin
+isoleucin:
+  other: Isoleucin
+leucin:
+  other: Leucin
+lysin:
+  other: Lysin
+methionin:
+  other: Methionin
+phenylalanin:
+  other: Phenylalanin
+prolin:
+  other: Prolin
+serin:
+  other: Serin
+threonin:
+  other: Threonin
+tryptophan:
+  other: Tryptophan
+tyrosin:
+  other: Tyrosin
+valin:
+  other: Valin
+
+protein:
+  other: Protein
+nppu:
+  other: NPPU
+
+userCount:
+  other: Platform user reach
+monthlyCosts:
+  other : Costs / month
+til:
+  other: til
+moreUsers:
+  other: more users
+negotiable:
+  other: negotiable
+
+contactName:
+  other: Name
+contactCompany:
+  other: Company
+contactEmail:
+  other: Email
+contactPhone:
+  other: Phone
+contactMessage:
+  other: Message
+contactSend:
+  other: Send
+contactThanksTitle:
+  other: "Thank you for your enquiry!"
+contactThanksText:
+  other: "We will get back to you shortly."

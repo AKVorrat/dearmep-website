@@ -1,0 +1,14 @@
+{{ define "main" }}
+{{- if .Params.options.fullWidth -}}
+  {{ .Content | replaceRE "<p><div" "<div" | replaceRE "(?s:</div>\n?</p>)" "</div>" | safeHTML }}
+{{- else -}}
+  <div class="row justify-content-center">
+    <div class="col-md-12 col-lg-10 col-xl-8">
+      <article>
+        <h1><span>{{ .Title }}</span></h1>
+        {{ .Content | replaceRE "<p><div" "<div" | replaceRE "(?s:</div>\n?</p>)" "</div>" | safeHTML }}
+      </article>
+    </div>
+  </div>
+{{- end -}}
+{{ end }}

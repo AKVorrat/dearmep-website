@@ -1,0 +1,47 @@
+{{- $classes := slice -}}
+{{- if .Get "width" -}}
+  {{ $width := split (.Get "width") " " }}
+  {{ range $width }}
+    {{ $classes = $classes | append (printf "col-%s" .) }}
+  {{ end }}
+{{- end -}}
+{{- if eq (len $classes) 0 -}}
+  {{ $classes = $classes | append "col" }}
+{{- end -}}
+{{- if .Get "align-self" -}}
+  {{ $classes = $classes | append (printf "align-self-%s" (.Get "align-self")) }}
+{{- end -}}
+{{- if .Get "justify-content" -}}
+  {{ $classes = $classes | append (printf "justify-content-%s" (.Get "justify-content")) }}
+{{- end -}}
+{{- if .Get "text" -}}
+  {{ $classes = $classes | append (printf "text-%s" (.Get "text")) }}
+{{- end -}}
+{{- if .Get "order" -}}
+  {{ $order := split (.Get "order") " " }}
+  {{ range $order }}
+    {{ $classes = $classes | append (printf "order-%s" .) }}
+  {{ end }}
+{{- end -}}
+{{- if .Get "g" -}}
+  {{ $g := split (.Get "g") " " }}
+  {{ range $g }}
+    {{ $classes = $classes | append (printf "g-%s" .) }}
+  {{ end }}
+{{- end -}}
+{{- if .Get "gx" -}}
+  {{ $gx := split (.Get "gx") " " }}
+  {{ range $gx }}
+    {{ $classes = $classes | append (printf "gx-%s" .) }}
+  {{ end }}
+{{- end -}}
+{{- if .Get "gy" -}}
+  {{ $gy := split (.Get "gy") " " }}
+  {{ range $gy }}
+    {{ $classes = $classes | append (printf "gy-%s" .) }}
+  {{ end }}
+{{- end -}}
+{{- $classString := delimit $classes " " -}}
+<div class="{{ $classString }}">
+  {{ .Inner }}
+</div>

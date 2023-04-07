@@ -1,0 +1,11 @@
+@import "vanilla-cookieconsent/src/cookieconsent";
+
+.cc_div {
+  .c-bn {
+    border-radius: 0;
+  }
+}
+
+#cm, #s-inr, .cc_div .c-bl, .cc_div .b-tl, #s-bl .act .b-acc {
+  border-radius: 0;
+}

@@ -1,0 +1,5 @@
+<a{{ if .Get "href" }} href="{{ ref . (.Get "href") }}"{{ end }}>
+    <button type="button" class="btn{{ if .Get "color" }} btn-{{ .Get "color" }}{{ end }}">
+      {{ .Inner }}
+    </button>
+</a>

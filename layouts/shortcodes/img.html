@@ -1,0 +1,43 @@
+{{ $image := "" -}}
+{{ if (urls.Parse (.Get "src")).IsAbs }}
+  {{ $image = resources.GetRemote (.Get "src") -}}
+{{ else -}}
+  {{ $image = .Page.Resources.GetMatch (.Get "src") -}}
+{{ end -}}
+{{ with $image -}}
+  {{ $lqip := $image.Resize site.Params.lqipWidth -}}
+
+  {{ $imgSrc := "" -}}
+  {{ $imgSrcSet := slice -}}
+
+  {{ $widths := site.Params.landscapePhotoWidths -}}
+  {{ if gt $image.Height $image.Width -}}
+    {{ $widths = site.Params.portraitPhotoWidths -}}
+  {{ end -}}
+
+  {{ if $.Get "width" -}}
+    {{ $srcUrl := (int ($.Get "width") | printf "%dx" | $image.Resize).Permalink -}}
+    {{ if eq $imgSrc "" -}}{{ $imgSrc = $srcUrl -}}{{ end -}}
+    {{ $imgSrcSet = $imgSrcSet | append (printf "%s %sw" $srcUrl ($.Get "width") ) -}}
+  {{ else -}}
+    {{ range $widths -}}
+      {{ $srcUrl := (printf "%dx" . | $image.Resize).Permalink -}}
+      {{ if eq $imgSrc "" -}}{{ $imgSrc = $srcUrl -}}{{ end -}}
+      {{ $imgSrcSet = $imgSrcSet | append (printf "%s %dw" $srcUrl .) -}}
+    {{ end -}}
+  {{ end -}}
+
+  {{ $imgSrcSet = (delimit $imgSrcSet ",") -}}
+
+  {{ if gt $image.Width site.Params.smallLimit -}}
+  <figure class="figure{{ if $.Get "width" }}{{ else }} figure-fluid{{ end }}">
+      <img class="figure-img img-fluid lazyload blur-up" data-sizes="auto" src="{{ $lqip.Permalink }}" data-srcset="{{ $imgSrcSet }}" width="{{ if $.Get "width" }}{{ $.Get "width" }}{{ else }}{{ $image.Width }}{{ end }}" height="{{ if $.Get "height" }}{{ $.Get "height" }}{{ else }}{{ $image.Height }}{{ end }}"{{ if $.Get "alt" }} alt="{{ $.Get "alt" }}"{{ end }}>
+      <noscript><img class="figure-img img-fluid" sizes="100vw" srcset="{{ $imgSrcSet }}" src="{{ $image.Permalink }}" width="{{ if $.Get "width" }}{{ $.Get "width" }}{{ else }}{{ $image.Width }}{{ end }}" height="{{ if $.Get "height" }}{{ $.Get "height" }}{{ else }}{{ $image.Height }}{{ end }}"{{ if $.Get "alt" }} alt="{{ $.Get "alt" }}"{{ end }}></noscript>
+      {{ with $.Get "title" }}<figcaption class="figure-caption">{{ . | safeHTML }}</figcaption>{{ end -}}
+    </figure>
+  {{ else -}}
+    <img class="img-fluid lazyload blur-up" src="{{ $lqip.Permalink }}" data-src="{{ $image.Permalink }}" width="{{ if $.Get "width" }}{{ $.Get "width" }}{{ else }}{{ $image.Width }}{{ end }}" height="{{ if $.Get "height" }}{{ $.Get "height" }}{{ else }}{{ $image.Height }}{{ end }}"{{ if $.Get "alt" }} alt="{{ $.Get "alt" }}"{{ end }}>
+  {{ end -}}
+{{ else -}}
+  {{ erroridf "image-not-found" (printf "Image %v not found" ($.Get "src")) -}}
+{{ end -}}
