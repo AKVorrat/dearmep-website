@@ -11,7 +11,7 @@ A huge thanks goes out to our developer team:
 - Backend developer: Tim Weber, link
 - UI/UX design: Isabelle…
 - Frontend developer: Tobias…
-- Administration and DevOps, Dominik
+- Administration and DevOps, [Dominik Polakovics](https://cloonar.com)
 
 Those developers might be available to help other NGOs to implement DearMEP for their own campaign, but any developer should be able to do so with the free and open source code we will make available on Github.
 
