@@ -8,7 +8,7 @@ menu:
 This is a project of the digital rights NGO epicenter.works. We have a [history](https://en.epicenter.works/history) of novel campaigning tools. In 2013 we launched [www.savetheinternet.eu](https://www.savetheinternet.eu) and sent faxes to printers of Members of the European Parliament to convince the EU to adopt strong net neutrality protections. In 2019 we launched the [www.pledge2019.eu](https://www.pledge2019.eu) campaign to convince politicians with a phone tool not to vote for upload filters in the EU Copyright Directive. This 2019 effort fell short by five votes in 2nd reading, but showed us with 168 hours of phone time in one month of campaign how powerful such a tool can be. In 2022 the Chat Control proposal prompted us to reactivate this idea. This proposal mandates the scanning of all private messages of EU citizens indiscriminately for illegal material with error-prone algorithmic systems. We want to empower citizens to prevent the EU from moving forward with this disastrous proposal that would undermine privacy, encryption and do irreparable harm to our online world.
 
 A huge thanks goes out to our developer team:
-- Backend developer: Tim Weber, link
+- Backend developer: [Tim Weber](https://scy.name/)
 - UI/UX design: Isabelle…
 - Frontend developer: Tobias…
 - Administration and DevOps, [Dominik Polakovics](https://cloonar.com)
