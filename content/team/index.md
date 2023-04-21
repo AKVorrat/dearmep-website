@@ -9,8 +9,8 @@ This is a project of the digital rights NGO epicenter.works. We have a [history]
 
 A huge thanks goes out to our developer team:
 - Backend developer: [Tim Weber](https://scy.name/)
-- UI/UX design: Isabelle…
-- Frontend developer: Tobias…
+- UI/UX design: [Isabella Horn](https://isabellahorn.com/)
+- Frontend developer: [Tobias Mühlberger](https://muehlberger.dev)
 - Administration and DevOps, [Dominik Polakovics](https://cloonar.com)
 
 Those developers might be available to help other NGOs to implement DearMEP for their own campaign, but any developer should be able to do so with the free and open source code we will make available on Github.
