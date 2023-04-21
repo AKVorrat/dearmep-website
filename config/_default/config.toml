@@ -1,4 +1,4 @@
-baseurl = "https://akvorrat.github.io/dearmep-website/"
+baseurl = "https://dearmep.eu/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true

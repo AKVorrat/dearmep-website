@@ -12,7 +12,7 @@ description = "DearMEP"
 ## Open Graph
 images = ["images/logo.png"]
 ogLocale = "en_US"
-domainTLD = "dearmep.io"
+domainTLD = "dearmep.eu"
 titleHome = "DearMEP"
 
 ## Twitter Cards
@@ -71,7 +71,6 @@ docsVersioning = false
 fullWidth = false
 fixedNavbar = true
 icons = true
-matomo = "https://matomo.epicenter.works/js/container_bjSxSYv2.js"
 
 [menu]
 [menu.section]

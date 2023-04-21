@@ -6,3 +6,5 @@
   {{ $alertInit := resources.Get "js/alert-init.js" | js.Build | minify -}}
   <script>{{ $alertInit.Content | safeJS }}</script>
 {{- end -}}
+{{ $matomoInit := resources.Get "js/matomo-init.js" | js.Build | minify -}}
+<script>{{ $matomoInit.Content | safeJS }}</script>
