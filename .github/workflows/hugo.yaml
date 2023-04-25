@@ -43,7 +43,7 @@ jobs:
       - name: Build page
         uses: borales/actions-yarn@v4
         with:
-          cmd: build # will run `yarn install` command
+          cmd: run build:stage # will run `yarn install` command
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
@@ -67,6 +67,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: webhost.epicenter.works
+          protocol: ftps
           username: stage
           password: ${{ secrets.ftp_password }}
 
