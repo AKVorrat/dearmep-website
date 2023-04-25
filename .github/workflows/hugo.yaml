@@ -70,6 +70,7 @@ jobs:
           protocol: ftps
           username: stage
           password: ${{ secrets.ftp_password }}
+          server-dir: ./public_html/
 
   # # Deployment job
   # deploy:
