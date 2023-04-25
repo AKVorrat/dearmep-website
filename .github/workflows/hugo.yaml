@@ -64,7 +64,7 @@ jobs:
           server: webhost.epicenter.works
           username: stage
           password: ${{ secrets.ftp_password }}
-          local-dir: ./build/
+          local-dir: ./public/
 
   # # Deployment job
   # deploy:
