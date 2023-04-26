@@ -16,11 +16,10 @@ resourceHints:
     height: 605
 class: home
 ---
-{{< bs-frame background-image="header.jpg" color="secondary" space-after="4" space-before="4" >}}
+{{< bs-frame color="secondary" frame="indent" space-after="0" space-before="0" >}}
   {{< bs-row >}}
     {{< bs-col text="center" >}}
-      {{< img src="logo-image.png" width="150" >}}<br />
-      {{< img src="logo-text.png" width="300" >}}
+      {{< img src="header.jpg" >}}<br />
     {{< /bs-col >}}
   {{< /bs-row >}}
 {{< /bs-frame >}}
