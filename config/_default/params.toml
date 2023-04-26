@@ -48,7 +48,7 @@ lqipWidth = "20x"
 smallLimit = "300"
 
 # Footer
-footer = "Copyright (c) epicenter.works <a href=\"https://creativecommons.org/licenses/by/4.0/\">CC-by 4.0</a><br>Fotocredits:<br /><a href=\"https://audiovisual.ec.europa.eu/en/photo-details/P-052165~2F00-06\">https://audiovisual.ec.europa.eu/en/photo-details/P-052165~2F00-06</a><br />Speechbubbles by <a href=\"https://rawpixel.com\">rawpixel.com</a> on Freepik"
+footer = "Copyright (c) epicenter.works <a href=\"https://creativecommons.org/licenses/by/4.0/\">CC-by 4.0</a><br>Fotocredits:<br /><a href=\"https://audiovisual.ec.europa.eu/en/photo-details/P-052165~2F00-06\">European Union</a><br />Speechbubbles by <a href=\"https://rawpixel.com\">rawpixel.com</a> on <a href=\"https://de.freepik.com/vektoren-kostenlos/sammlung-des-spracheblasenvektors_3093661.htm\">Freepik</a>"
 
 # Feed
 copyRight = "Copyright (c) epicenter.works <a href=\"https://creativecommons.org/licenses/by/4.0/\">CC-by 4.0</a>"
