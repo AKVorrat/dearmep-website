@@ -12,6 +12,7 @@ module.exports = {
       safelist: {
         standard: [
           'lazyloaded',
+          'show',
           ...whitelister([
             './assets/scss/components/_cookieconsent.scss',
             './node_modules/vanilla-cookieconsent/src/cookieconsent.css',
