@@ -50,7 +50,7 @@ Citizens can call once or schedule daily or weekly calls. E-mail or social media
 {{< bs-frame color="secondary" >}}
   {{< bs-row cols="1 md-2" >}}
     {{< bs-col order="md-2" >}}
-      {{< img src="screen-1.png" >}}
+      {{< img src="screen-2.png" >}}
     {{< /bs-col >}}
     {{% bs-col order="md-1" %}}
 The DearMEP tool is reusable for other campaigns in the European Parliament. After Chat Control (Regulation to prevent and combat child sexual abuse online 2022/0155 (COD)) will have been concluded, this tool will be released as free software. NGOs can use it with minimum effort to run their own campaigns. We believe access to the Parliament and to decision makers should be equally available to all people in a democracy. The tools are therefore designed and built to also allow for reuse in other contexts (national parliaments, governments, other assemblies, etc.) with only slight adaptions. The cost of phone calls have to be covered by whoever operates the tool, but these costs are scalable, since they are proportionate to the amount of users actively engaging in the campaign. As this is free software, we do not charge for operating this tool. There is no license fee and we haven’t received any grant or corporate money for developing it either.
@@ -63,7 +63,7 @@ The DearMEP tool is reusable for other campaigns in the European Parliament. Aft
 {{< bs-frame >}}
   {{< bs-row cols="1 md-2" >}}
     {{< bs-col >}}
-      {{< img src="screen-1.png" >}}
+      {{< img src="screen-3.png" >}}
     {{< /bs-col >}}
     {{% bs-col %}}
 As a European data protection NGO we take privacy very seriously. We tried to reduce the processing of personal information to a minimum and therefore follow privacy-by-design and privacy-by-default wherever possible.
