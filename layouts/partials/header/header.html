@@ -12,7 +12,7 @@
       aria-label="Main navigation">
       <a class="navbar-brand p-0 me-auto" href="{{ "/" | relLangURL }}" aria-label="{{ .Site.Params.Title }}">
         {{ $logo := ((resources.Get "images/logo.png").Resize "61x43").Permalink -}}
-        <img src="{{ $logo | absURL }}" height="43" width="61.1167" />
+        <img src="{{ $logo | absURL }}" height="43" width="61" />
       </a>
 
       <button class="btn btn-menu d-block d-md-none order-5" type="button" data-bs-toggle="offcanvas"
