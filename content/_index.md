@@ -29,7 +29,7 @@ class: home
     {{% bs-col %}}
 DearMEP is a tool to empower citizens to reach out – easy, directly and free of charge – to their elected representatives in the European Parliament. Our goal is to make the voices of average people heard in the political process!
 
-Many important decisions are taken in Europe. Yet, Brussels and Strasbourg often seem further away than national politics. DearMEP is a tool that brings EU politicians much closer to home and to the people they should be accountable to. NGOs can use this free software tool to empower their constituency to counter the power of paid lobbyists. Users don’t need to learn how the EU works, which politician to call on which issue under which number. They only need to care about the issue and spend time – not money – to make a difference.
+Many important decisions are taken in Europe. Yet, Brussels and Strasbourg often seem further away than national politics. DearMEP is a tool that brings EU politicians much closer to home and to the people they should be accountable to. NGOs can use this free software tool to empower their constituency to counter the power of paid lobbyists. Users don’t need to learn how the EU works, which politician to call under which number. They only need to care about the issue and spend time – not money – to make a difference.
     {{% /bs-col %}}
   {{< /bs-row >}}
 {{< /bs-frame >}}
