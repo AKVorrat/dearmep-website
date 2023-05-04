@@ -8,3 +8,14 @@ name = "Github"
 pre = '<i class="fab fa-fw fa-github"></i>'
 url = "https://github.com/AKVorrat/dearmep"
 weight = 20
+
+
+[[footer]]
+name = "Legal notice"
+url = "https://en.epicenter.works/contact"
+target = "_blank"
+weight = 10
+[[footer]]
+name = "Privacy polivy"
+url = "https://en.epicenter.works/privacy"
+weight = 20

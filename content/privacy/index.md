@@ -2,9 +2,6 @@
 title: Privacy policy
 slug: privacy-policy
 indent: true
-menu:
-  footer:
-    weight: 1
 ---
 Your privacy is important to us, so we take our duty to inform you which of your data we use in which way very seriously.
 

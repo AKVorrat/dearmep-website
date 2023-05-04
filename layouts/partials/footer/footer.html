@@ -9,7 +9,11 @@
       <div class="col-lg-6 order-first order-lg-last text-lg-end">
         <ul class="list-inline">
           {{ range .Site.Menus.footer -}}
-            <li class="list-inline-item"><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+              {{ if eq (hasPrefix .URL "http") true }}
+                <li class="list-inline-item"><a href="{{ .URL | relURL }}" target="_blank">{{ .Name }}</a></li>
+              {{ else }}
+                <li class="list-inline-item"><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+              {{ end }}
           {{ end -}}
         </ul>
       </div>

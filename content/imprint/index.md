@@ -2,9 +2,6 @@
 title: Legal notice
 slug: legal-notice
 indent: true
-menu:
-  footer:
-    weight: 2
 ---
 
 **epicenter.works - Plattform Grundrechtspolitik**
