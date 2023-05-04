@@ -62,7 +62,7 @@ jobs:
           server: webhost.epicenter.works
           protocol: ftps
           username: stage
-          password: ${{ secrets.ftp_password }}
+          password: ${{ secrets.ftp_password_stage }}
           server-dir: ./public_html/
 
   build-production:
@@ -93,7 +93,7 @@ jobs:
 
   # Deployment job
   deploy-production:
-    name: 🎉 Deploy stage
+    name: 🎉 Deploy production
     environment:
       name: production
       url: https://dearmep.eu
@@ -110,6 +110,6 @@ jobs:
           server: webhost.epicenter.works
           protocol: ftps
           username: dearmep
-          password: ${{ secrets.ftp_password }}
+          password: ${{ secrets.ftp_password_prod }}
           server-dir: ./public_html/
 
