@@ -4,7 +4,7 @@ description: ""
 lead: ""
 date: {{ .Date }}
 lastmod: {{ .Date }}
-draft: false
+draft: true
 weight: 50
 headerimage: header.png
 images: ["{{ .Name | urlize }}.jpg"]
