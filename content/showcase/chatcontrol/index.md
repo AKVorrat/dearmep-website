@@ -12,7 +12,7 @@ pinned: false
 homepage: false
 ---
 
-We created this tool to support the protest against the EU initiative to scan indiscriminately all private and public communication of citizens online. This Chat Control bill (Regulation to prevent and combat child sexual abuse online 2022/0155 (COD)) has led to many different campaigns in Europe which try to organize citizens in protests against this direct attack on encryption and other foundations of our online world. DearMEP is user-agnostic and can be implemented by all groups who want to use it.
+We created this tool to support the protest against the EU initiative to scan indiscriminately all private and public communication of citizens online. This Chat Control bill (Regulation to prevent and combat child sexual abuse online 2022/0155 (COD)) has led to many different campaigns in Europe which try to organize citizens in protests against this direct attack on encryption and other foundations of our online world.
 
 ## Integrate
 Integrate the campaign in your Website
@@ -21,7 +21,7 @@ Integrate the campaign in your Website
 ```html
 <link rel="stylesheet" href="http://stopscanning.me/fonts.css" type="text/css" />
 <dear-mep host="https://stopscanning.me/api/" />
-<script src="https://stopscanning.me/dear-mep.js"></script>
+<script src="https://chatcontrol.dearmep.eu//dear-mep.js"></script>
 ```
 1. Include the fonts CSS
 2. Create the dear-mep Element with Parameters
@@ -34,15 +34,14 @@ Integrate the campaign in your Website
 
 **Integration with optional parameters:**
 ```html
-<link rel="stylesheet" href="http://stopscanning.me/fonts.css" type="text/css">
+<link rel="stylesheet" href="https://chatcontrol.dearmep.eu//fonts.css" type="text/css">
 <dear-mep
-  host="https://stopscanning.me/api/"
+  host="https://chatcontrol.dearmep.eu//api/"
 />
-<script src="https://stopscanning.me/dear-mep.js"></script>
+<script src="https://chatcontrol.dearmep.eu//dear-mep.js"></script>
 ```
 
 ## Integrations
 {{< bs-row >}}
-  {{< card src="header.png" title="Reference 1" href="/docs" >}}
-  {{< card src="header.png" title="Reference 2" href="https://chatcontrol.de" >}}
+  {{< card src="showcase1ref1.png" title="German Campaign" href="https://chat-kontrolle.eu/" >}}
 {{< /bs-row >}}
