@@ -19,9 +19,9 @@ Integrate the campaign in your Website
 
 **Simple integration:**
 ```html
-<link rel="stylesheet" href="http://stopscanning.me/fonts.css" type="text/css" />
-<dear-mep host="https://stopscanning.me/api/" />
-<script src="https://chatcontrol.dearmep.eu//dear-mep.js"></script>
+<link rel="stylesheet" href="http://chatcontrol.dearmep.eu/fonts.css" type="text/css" />
+<dear-mep host="https://chatcontrol.dearmep.eu/api/" />
+<script src="https://chatcontrol.dearmep.eu/dear-mep.js"></script>
 ```
 1. Include the fonts CSS
 2. Create the dear-mep Element with Parameters
@@ -34,11 +34,11 @@ Integrate the campaign in your Website
 
 **Integration with optional parameters:**
 ```html
-<link rel="stylesheet" href="https://chatcontrol.dearmep.eu//fonts.css" type="text/css">
+<link rel="stylesheet" href="https://chatcontrol.dearmep.eu/fonts.css" type="text/css">
 <dear-mep
-  host="https://chatcontrol.dearmep.eu//api/"
+  host="https://chatcontrol.dearmep.eu/api/"
 />
-<script src="https://chatcontrol.dearmep.eu//dear-mep.js"></script>
+<script src="https://chatcontrol.dearmep.eu/dear-mep.js"></script>
 ```
 
 ## Integrations
