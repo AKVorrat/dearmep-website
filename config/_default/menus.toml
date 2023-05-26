@@ -16,6 +16,6 @@ url = "https://en.epicenter.works/contact"
 target = "_blank"
 weight = 10
 [[footer]]
-name = "Privacy polivy"
+name = "Privacy policy"
 url = "https://en.epicenter.works/privacy"
 weight = 20
