@@ -1,7 +1,7 @@
 ---
 title: Concept
 comment: false
-draft: true
+draft: false
 menu:
   main:
     weight: 50
@@ -12,7 +12,7 @@ and more citizens being involved in the decision making process.**
 
 ## Problem Description
 Decisions in the European Union seem far removed from peoples’ daily lives and don’t receive the
-public scrutiny they deserve.1 This leads to a situation where Members of the European Parliament
+public scrutiny they deserve.<sup>1</sup> This leads to a situation where Members of the European Parliament
 (MEPs) are not held to account for their decisions, which in turn leads to a de-prioritization of the
 public interest in EU decision making. Furthermore, the EU decision making process is opaque to
 many citizens. They neither know their elected representatives nor the ongoing negotiations or whom
@@ -45,7 +45,8 @@ much in the public eye as national lawmakers contributes to this fact. We believ
 European Union needs to be accessible and accountable to its citizens. The hesitation around this
 issue might be due to a cultural understanding of the role of MEPs which is subject to change. We also
 tried to address this issue with the header image of our tool.
-1 This can be measured in the distribution of media coverage and citizen engagement between national and EU level decisions.
+{{< img src="header.jpg" >}}<br />
+This can be measured in the distribution of media coverage and citizen engagement between national and EU level decisions.
 
 ## Minimum Viable Product (MVP)
 The MVP offers the following functionality:
@@ -64,28 +65,29 @@ from the selected country. The user can manually change their country at any tim
 case they have dual citizenship, are traveling or using a VPN. Users can also select any particular MEP,
 for example if they want to continue a previous conversations. MEPs with a sway-ability score of 0 or 1
 are marked as unlikely to be convinced.
-2
+{{< img src="1-no call.png" >}}<br />
 When the phone functionality is not disabled the following functions are also available
 5) When the user is not registered in the system they are asked to provide a telephone number and
-accept the privacy policy. If the phone number is valid2, an SMS verification code is sent.
-2 Only non-premium rate, mobile phone numbers of EU countries are deemed valid.
-3
+accept the privacy policy. If the phone number is valid<sup>2</sup>, an SMS verification code is sent.
+{{< img src="2-not authenticated.png" >}}<br />
+Only non-premium rate, mobile phone numbers of EU countries are deemed valid.
+{{< img src="3-authenticated 2nd step.png" >}}<br />
+{{< img src="4-choose call option.png" >}}<br />
 DearMEP: Concept Note| Epicenter.works
 6) The user has the option to initiate a call with the particular MEP that has been selected right now.
-4
+{{< img src="6-call now.png" >}}<br />
 DearMEP: Concept Note| Epicenter.works
 7) The user can also schedule a call with MEPs from the selected country at a later time. Weekday(s)
-and time for that weekday3 can be chosen. The system then calls the user and puts them in an audio
+and time for that weekday<sup>3</sup> can be chosen. The system then calls the user and puts them in an audio
 menu where they can press buttons on their phone to execute particular commands. Those functions
 are a) connect now to MEP <name of MEP spoken> b) listen to arguments in preparation of your call. c)
 cancel your call subscription.
-3 Options are limited to office hours of the European Parliament matched towards the current timezone of the user.
-5
-DearMEP: Concept Note| Epicenter.works
+{{< img src="7-schedule call.png" >}}<br />
 8) Whenever a call above a certain threshold duration has been executed the system sends the user a
 link for a feedback form in which they can provide information about their experience, if they have the
 impression that they have convinced the MEP and if they experienced technical problems.
-9) The tool can be embedded in any online campaign as web component4 with adaptations to styling
+{{< img src="8-call feedback.png" >}}<br />
+9) The tool can be embedded in any online campaign as web component<sup>4</sup> with adaptations to styling
 so to match the host website, configurations like disabling of the call tool and other parameters like a
 string to attribute statistics to that particular campaign.
 10) The tool can be configured to self-learn and adapt the sway-ability score based on the call
@@ -105,8 +107,6 @@ for their particular use case. We call such an embed of an instance a **“campa
 The DearMEP tool processes personal data (phone numbers, IP addresses) and comes with a
 template privacy policy. This policy needs to be adapted by whoever hosts the tool, as this entity is
 most likely the data controller. Any changes to the functioning of the tool need to be reflected in the
-4 https://en.wikipedia.org/wiki/Web_Components
-6
 privacy policy. We give no guarantee and hold no liability for the instances or implementations of this
 tool. The instance that operates the DearMEP tool also needs to connect it to a phone provider and
 thereby cover the costs of the phone calls and SMS for users.
@@ -115,7 +115,7 @@ thereby cover the costs of the phone calls and SMS for users.
 Development is scheduled to conclude by early June. June is also scheduled for UI/UX and penetration
 testing. We hope to release the MVP in summer.
 Development was financed out of the Core of Epicenter.works and the software will be released under
-a free license once the CSAR legislation5 is concluded. In our understanding of democracy all avenues
+a free license once the CSAR legislation<sup>5</sup> is concluded. In our understanding of democracy all avenues
 to connect citizens to lawmakers should be equally accessible to everyone.
 
 ## Future Development Ideas
@@ -150,9 +150,6 @@ the question remains how many times that e-mail can be sent to an MEP before its
 LLM functions like ChatGPT are *not* solutions for us and should be avoided as our purpose is to
 connect real citizens to their elected representatives. We try to make it easier for people and
 authenticity is the deciding factor to our advantage.
-5 See https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/0155(COD)&l=en and future
-https://dearmep.eu/
-7
 
 **Statistics Dashboard**
 
@@ -188,5 +185,11 @@ subscription functionality.
 To help bring this tool into the world, Epicenter.works will host the first instance of DearMEP for the
 CSAR legislation. We are offering the tool to all campaigns focussing on this issue, cooperate with them
 and learn from their experience.
-8
 
+---
+1) This can be measured in the distribution of media coverage and citizen engagement between national and EU level decisions.
+2) Only non-premium rate, mobile phone numbers of EU countries are deemed valid.
+3) Options are limited to office hours of the European Parliament matched towards the current timezone of the user.
+4) [https://en.wikipedia.org/wiki/Web_Components](https://en.wikipedia.org/wiki/Web_Components)
+5) See [https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/0155(COD)&l=en](https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/0155(COD)&l=en) and future
+[https://dearmep.eu/](https://dearmep.eu/)
