@@ -46,7 +46,6 @@ European Union needs to be accessible and accountable to its citizens. The hesit
 issue might be due to a cultural understanding of the role of MEPs which is subject to change. We also
 tried to address this issue with the header image of our tool.
 {{< img src="header.jpg" >}}<br />
-This can be measured in the distribution of media coverage and citizen engagement between national and EU level decisions.
 
 ## Minimum Viable Product (MVP)
 The MVP offers the following functionality:
@@ -66,17 +65,14 @@ case they have dual citizenship, are traveling or using a VPN. Users can also se
 for example if they want to continue a previous conversations. MEPs with a sway-ability score of 0 or 1
 are marked as unlikely to be convinced.
 {{< img src="1-no call.png" >}}<br />
-When the phone functionality is not disabled the following functions are also available
+**When the phone functionality is not disabled the following functions are also available**
 5) When the user is not registered in the system they are asked to provide a telephone number and
 accept the privacy policy. If the phone number is valid<sup>2</sup>, an SMS verification code is sent.
 {{< img src="2-not authenticated.png" >}}<br />
-Only non-premium rate, mobile phone numbers of EU countries are deemed valid.
 {{< img src="3-authenticated 2nd step.png" >}}<br />
 {{< img src="4-choose call option.png" >}}<br />
-DearMEP: Concept Note| Epicenter.works
 6) The user has the option to initiate a call with the particular MEP that has been selected right now.
 {{< img src="6-call now.png" >}}<br />
-DearMEP: Concept Note| Epicenter.works
 7) The user can also schedule a call with MEPs from the selected country at a later time. Weekday(s)
 and time for that weekday<sup>3</sup> can be chosen. The system then calls the user and puts them in an audio
 menu where they can press buttons on their phone to execute particular commands. Those functions
@@ -102,8 +98,10 @@ When the DearMEP Tool is applied for a particular campaign it needs to be centra
 configured. Texts and audio files have to be adapted for that issue. MEPs of the current legislative term
 have to be uploaded with their sway-ability value. We call such a running version of DearMEP an
 **“instance”**.
+
 Every instance can be embedded in multiple campaign websites, which might do further configuration
 for their particular use case. We call such an embed of an instance a **“campaign”**.
+
 The DearMEP tool processes personal data (phone numbers, IP addresses) and comes with a
 template privacy policy. This policy needs to be adapted by whoever hosts the tool, as this entity is
 most likely the data controller. Any changes to the functioning of the tool need to be reflected in the
