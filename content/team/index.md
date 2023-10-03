@@ -12,6 +12,7 @@ A huge thanks goes out to our developer team:
 - UI/UX design: [Isabella Horn](https://isabellahorn.com/)
 - Frontend developer: [Tobias Mühlberger](https://muehlberger.dev)
 - Administration and DevOps, [Dominik Polakovics](https://cloonar.com)
+- Translation: (Hugo Peixoto)[https://hugopeixoto.net] and Jörn Bethune
 - Policy Advice on the "Chat Control" proposal, Elina "Khaleesi" Eickstädt
 - Project Owner & Advice on EU policymaking, [Thomas Lohninger](epicenter.works/team)
 
