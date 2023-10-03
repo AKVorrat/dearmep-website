@@ -14,9 +14,10 @@ let
 in stdenv.mkDerivation {
     name = "node";
     buildInputs = [
-        nodejs
-        yarn
-        nix_pkgs_with_hugo_106.hugo
+      git
+      nodejs
+      yarn
+      nix_pkgs_with_hugo_106.hugo
     ];
     shellHook = ''
         export PATH="$PWD/node_modules/.bin/:$PATH"
