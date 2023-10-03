@@ -66,6 +66,7 @@ bootStrapJs = true
 breadCrumb = true
 highLight = true
 kaTex = false
+gdprIframe = true
 multilingualMode = false
 docsVersioning = false
 fullWidth = false

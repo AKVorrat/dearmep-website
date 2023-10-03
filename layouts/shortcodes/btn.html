@@ -1,4 +1,10 @@
-<a{{ if .Get "href" }} href="{{ ref . (.Get "href") }}"{{ end }}>
+{{ $href := .Get "href" }}
+{{ $blank := true }}
+{{ if not (hasPrefix $href "http") }}
+  {{ $href = ref . $href }}
+  {{ $blank = false }}
+{{ end }}
+<a href="{{ $href }}"{{ if $blank }} target="_blank"{{ end }}>
     <button type="button" class="btn{{ if .Get "color" }} btn-{{ .Get "color" }}{{ end }}">
       {{ .Inner }}
     </button>
