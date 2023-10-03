@@ -21,7 +21,10 @@ in stdenv.mkDerivation {
     shellHook = ''
         export PATH="$PWD/node_modules/.bin/:$PATH"
         mkdir -p $PWD/node_modules/.bin/hugo
-        ln -s ${nix_pkgs_with_hugo_106.hugo}/bin/hugo $PWD/node_modules/.bin/hugo/hugo
+        if [ ! -f $PWD/node_modules/.bin/hugo/hugo ]
+          then
+            ln -s ${nix_pkgs_with_hugo_106.hugo}/bin/hugo $PWD/node_modules/.bin/hugo/hugo
+        fi
         cat <<EOT > $PWD/node_modules/.bin/hugo/version.json
 {
   "arch": "x64",
