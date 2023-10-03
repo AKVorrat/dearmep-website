@@ -1,7 +1,7 @@
 ---
 title: Concept
 comment: false
-draft: false
+draft: true
 menu:
   main:
     weight: 50
