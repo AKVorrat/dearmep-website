@@ -13,4 +13,10 @@
     background: #f2f2f2;
     color: var(--bs-body-color);
   }
+
+  iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
 }
