@@ -1,0 +1,19 @@
+{{ $src := .Get "src" }}
+{{ $domain := (urls.Parse $src).Host }}
+{{ $width := .Get "width" }}
+{{ $height := .Get "height" }}
+{{ $style := .Get "style" }}
+{{ $class := .Get "class" }}
+<div class="gdpr-iframe-wrapper" consent="{{ $domain }}">
+  <iframe data-src="{{ $src }}" width="{{ $width }}" height="{{ $height }}" style="{{ $style }}" class="{{ $class }}"></iframe>
+  <div class="gdpr-iframe-consent">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+      <label class="form-check-label" for="flexCheckChecked">
+        Remember consent for {{ $domain }}.
+      </label>
+    </div>
+    Click the button to load an iframe from {{ $domain }}. Thereby, you consent to their data protection policy<br />
+    <Button class="btn btn-primary">Load iframe</button>
+  </div>
+</div>
