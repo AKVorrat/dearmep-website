@@ -3,11 +3,6 @@ name = "Mail"
 pre = '<i class="fas fa-fw fa-at"></i>'
 url = "mailto:team@epicenter.works"
 weight = 10
-[[social]]
-name = "Github"
-pre = '<i class="fab fa-fw fa-github"></i>'
-url = "https://github.com/AKVorrat/dearmep"
-weight = 20
 
 
 [[footer]]
