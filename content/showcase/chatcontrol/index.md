@@ -53,4 +53,5 @@ Integrate the campaign in your Website
 ## Integrations
 {{< bs-row >}}
   {{< card src="showcase1ref1.png" title="German Campaign" href="https://chat-kontrolle.eu/" >}}
+  {{< card src="showcase1ref2.png" title="Portuguese Campaign" href="https://chatcontrol.pt/" >}}
 {{< /bs-row >}}
