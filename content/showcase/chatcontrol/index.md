@@ -35,9 +35,9 @@ Integrate the campaign in your Website
 | host                    | The URL of the DearMEP-Server. This attribute is required! |
 | api                     | The URL of the dear-mep API-Server. This attribute is used if the API-Server is hosted separately from the server that provides hosts static assets. |
 | assets                  | The URL of the Assets-Server. This attribute is used if the static assets are hosted separately from the API-Server. |
-| default&#8209;country         | If the user has not (yet) selected a country and the server cannot determine the country (because a VPN or TOR is used for example), this country will be used as fallback. It makes sense for a german campaign to use "DE" for example. Use two didgit country codes such as: "DE", "AT", ... . |
+| default&#8209;country         | If the user has not (yet) selected a country and the server cannot determine the country (because a VPN or TOR is used for example), this country will be used as fallback. It makes sense for a german campaign to use "DE" for example. Use two-letter country codes according to ISO 639-1 Alpha-2 ("DE", "AT", ...). |
 | disable&#8209;calling         | If this attribute is present the calling functionality is hidden. |
-| disable&#8209;scheduling      | If this attribute is present the schedule-call functionality is hidden. NOTE: This functionality is not yet supported but it will be enabled by default as soon as it is. |
+| disable&#8209;scheduling      | If this attribute is present the schedule-call functionality is hidden. NOTE: This functionality is not yet supported and thus this parameter has no effect. The scheduling functionality will be enabled in the future if this attribute is not present. |
 
 **Integration with optional parameters:**
 ```html
@@ -45,9 +45,8 @@ Integrate the campaign in your Website
 <dear-mep
   host="https://chatcontrol.dearmep.eu/"
   default-country="DE"
-  disable-scheduling
 ></dear-mep>
-<script src="https://chatcontrol.dearmep.eu/static/dear-mep.js"></script>s
+<script src="https://chatcontrol.dearmep.eu/static/dear-mep.js"></script>
 ```
 
 ## Integrations
