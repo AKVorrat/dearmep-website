@@ -49,6 +49,10 @@ Integrate the campaign in your Website
 <script src="https://chatcontrol.dearmep.eu/static/dear-mep.js"></script>
 ```
 
+<link rel="stylesheet" href="https://chatcontrol.dearmep.eu/static/dear-mep.css" type="text/css"/>
+<dear-mep host="https://chatcontrol.dearmep.eu/"/></dear-mep>
+<script src="https://chatcontrol.dearmep.eu/static/dear-mep.js"></script>
+
 ## Integrations
 {{< bs-row >}}
   {{< card src="showcase1ref1.png" title="German Campaign" href="https://chat-kontrolle.eu/" >}}
