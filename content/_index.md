@@ -1,6 +1,5 @@
 ---
 title: DearMEP
-description: DearMEP
 comment: false
 options:
   fullWidth: true

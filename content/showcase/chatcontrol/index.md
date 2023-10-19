@@ -1,7 +1,5 @@
 ---
 title: "Chat Control"
-description: "Introducing Doks, a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
-excerpt: "Introducing Doks, a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
 date: 2023-04-04T09:19:42+01:00
 lastmod: 2023-04-04T09:19:42+01:00
 draft: false
