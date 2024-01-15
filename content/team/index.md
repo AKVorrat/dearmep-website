@@ -13,7 +13,7 @@ A huge thanks goes out to our team:
 - Frontend developer: [Tobias Mühlberger](https://muehlberger.dev)
 - Administration and DevOps, [Dominik Polakovics](https://cloonar.com)
 - Translation: [aura](https://chaos.social/@aura), [Hugo Peixoto](https://hugopeixoto.net), Jörn Bethune and [muminpappa](https://mastodonsweden.se/@muminpappa)
-- Speackers for audio user interface: [Yannic Hannebohn](https://hannebohn.eu/) and [Thomas Lohninger](epicenter.works/team)
+- Speakers for audio user interface: [Yannic Hannebohn](https://hannebohn.eu/) and [Thomas Lohninger](epicenter.works/team)
 - Policy Advice on the "Chat Control" proposal, Elina "Khaleesi" Eickstädt
 - Guy with the crazy idea aka. Product Owner & Advice on EU policymaking, [Thomas Lohninger](epicenter.works/team)
 
