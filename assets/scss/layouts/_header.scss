@@ -2,6 +2,11 @@
   @extend .nav-item;
 }
 
+.nav li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .banner .nav a {
   @extend .nav-link;
 }
