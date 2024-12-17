@@ -1,31 +1,31 @@
 <!doctype html>
-<html lang="{{ .Site.Params.LanguageIso | default "en" }}">
-  {{ partial "head/head.html" . }}
-  {{ if eq .Kind "home" -}}
-    {{ .Scratch.Set "class" "home" -}}
-  {{ else if eq .Kind "404" -}}
-    {{ .Scratch.Set "class" "error404" -}}
-  {{ else if eq .Kind "page" -}}
-    {{ .Scratch.Set "class" .Type -}}
-    {{ .Scratch.Add "class" " single" -}}
-  {{ else -}}
-    {{ .Scratch.Set "class" .Type -}}
-    {{ .Scratch.Add "class" " list" -}}
-  {{ end -}}
-  <body class="{{ .Scratch.Get "class" }}">
-    {{ partial "header/header.html" . }}
-    <div
-      class="container-{{ if or (.Site.Params.options.fullWidth) (.Params.fullWidth) (.Params.options.fullWidth) }}fluid wrap{{ else }}xxl{{ end }}"
-      {{ if (default false $.Page.Params.transparentHeader) }}style="margin-top: -69px;"{{ end }}
-      role="document"
-    >
-      <div class="content">
-        {{- block "main" . -}}{{- end -}}
-      </div>
+<html lang="{{ .Site.Params.LanguageIso | default " en" }}">
+{{ partial "head/head.html" . }}
+{{ if eq .Kind "home" -}}
+{{ .Scratch.Set "class" "home" -}}
+{{ else if eq .Kind "404" -}}
+{{ .Scratch.Set "class" "error404" -}}
+{{ else if eq .Kind "page" -}}
+{{ .Scratch.Set "class" .Type -}}
+{{ .Scratch.Add "class" " single" -}}
+{{ else -}}
+{{ .Scratch.Set "class" .Type -}}
+{{ .Scratch.Add "class" " list" -}}
+{{ end -}}
+
+<body class="{{ .Scratch.Get " class" }}">
+  {{ partial "header/header.html" . }}
+  <div
+    class="container-{{ if or (.Site.Params.options.fullWidth) (.Params.fullWidth) (.Params.options.fullWidth) }}fluid wrap{{ else }}xxl{{ end }}"
+    {{ if (default false $.Page.Params.transparentHeader) }}style="margin-top: -69px;" {{ end }} role="document">
+    <div class="content pb-4">
+      {{- block "main" . -}}{{- end -}}
     </div>
-    {{ block "sidebar-prefooter" . }}{{ end }}
-    {{ block "sidebar-footer" . }}{{ end }}
-    {{ partial "footer/footer.html" . }}
-    {{ partial "footer/script-footer.html" . }}
-  </body>
+  </div>
+  {{ block "sidebar-prefooter" . }}{{ end }}
+  {{ block "sidebar-footer" . }}{{ end }}
+  {{ partial "footer/footer.html" . }}
+  {{ partial "footer/script-footer.html" . }}
+</body>
+
 </html>
