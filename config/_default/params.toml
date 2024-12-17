@@ -53,6 +53,8 @@ footer = "Copyright (c) epicenter.works <a href=\"https://creativecommons.org/li
 # Feed
 copyRight = "Copyright (c) epicenter.works <a href=\"https://creativecommons.org/licenses/by/4.0/\">CC-by 4.0</a>"
 
+githubURL = "https://github.com/AKVorrat/dearmep"
+
 # Edit Page
 # repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster
 
