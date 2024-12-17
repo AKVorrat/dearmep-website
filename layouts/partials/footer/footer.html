@@ -1,3 +1,5 @@
+{{ partial "footer/github-button.html" . }}
+
 <footer class="footer text-muted">
   <div class="container-{{ if .Site.Params.options.fullWidth }}fluid{{ else }}xxl{{ end }}">
     <div class="row">
@@ -9,11 +11,11 @@
       <div class="col-lg-6 order-first order-lg-last text-lg-end">
         <ul class="list-inline">
           {{ range .Site.Menus.footer -}}
-              {{ if eq (hasPrefix .URL "http") true }}
-                <li class="list-inline-item"><a href="{{ .URL | relURL }}" target="_blank">{{ .Name }}</a></li>
-              {{ else }}
-                <li class="list-inline-item"><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-              {{ end }}
+          {{ if eq (hasPrefix .URL "http") true }}
+          <li class="list-inline-item"><a href="{{ .URL | relURL }}" target="_blank">{{ .Name }}</a></li>
+          {{ else }}
+          <li class="list-inline-item"><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+          {{ end }}
           {{ end -}}
         </ul>
       </div>

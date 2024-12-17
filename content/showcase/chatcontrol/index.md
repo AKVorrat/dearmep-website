@@ -44,7 +44,7 @@ Integrate the campaign in your Website
   host="https://chatcontrol.dearmep.eu/"
   default-country="DE"
 ></dear-mep>
-<script src="https://chatcontrol.dearmep.eu/static/dear-mep.js"></script>
+<script src="https://chatcontrol.dearmep.eu/static/dear-mep.js" async></script>
 ```
 
 <link rel="stylesheet" href="https://chatcontrol.dearmep.eu/static/dear-mep.css" type="text/css"/>

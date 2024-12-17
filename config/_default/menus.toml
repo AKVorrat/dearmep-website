@@ -4,6 +4,12 @@ pre = '<i class="fas fa-fw fa-at"></i>'
 url = "mailto:team@epicenter.works"
 weight = 10
 
+[[main]]
+name = "Documentation"
+url = "https://github.com/AKVorrat/dearmep?tab=readme-ov-file#-documentation"
+target = "_blank"
+weight = 60
+
 
 [[footer]]
 name = "Legal notice"
