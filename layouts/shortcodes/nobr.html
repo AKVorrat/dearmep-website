@@ -1,4 +1,4 @@
 {{/* Wraps text that should not wrap */}}
 <span class="nobr">
-  {{ . | safeHTML }}
+  {{ .Inner | markdownify }}
 </span>

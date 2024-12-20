@@ -17,6 +17,6 @@ A huge thanks goes out to our team:
 - Policy Advice on the "Chat Control" proposal, Elina "Khaleesi" Eickstädt
 - Guy with the crazy idea aka. Product Owner & Advice on EU policymaking, [Thomas Lohninger](epicenter.works/team)
 
-Those developers might be available to help other NGOs to implement DearMEP for their own campaign, but any developer should be able to do so with the free and open source code made available on {{ < shortcode "nobr" > }}[GitHub](https://github.com/AKVorrat/dearmep).{{ </ "nobr" > }}
+Those developers might be available to help other NGOs to implement DearMEP for their own campaign, but any developer should be able to do so with the free and open source code made available on {{< nobr >}}[GitHub](https://github.com/AKVorrat/dearmep).{{< /nobr >}}
 
 The DearMEP project was funded out of epicenter.works’ core. We didn’t ask anyone for permission to develop this tool. We trust the community will determine its value and allow us to continue what we do. As a non-profit we live of [donations](https://spenden.epicenter.works) and our [supporting members](https://support.epicenter.works).
