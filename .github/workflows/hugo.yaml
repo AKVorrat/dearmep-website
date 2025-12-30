@@ -38,7 +38,7 @@ jobs:
         with:
           cmd: run build:stage # will run `yarn install` command
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: dearmep-staging
           path: ./public
@@ -86,7 +86,7 @@ jobs:
         with:
           cmd: run build # will run `yarn install` command
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: dearmep-production
           path: ./public
