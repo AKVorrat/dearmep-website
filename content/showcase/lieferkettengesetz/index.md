@@ -10,7 +10,7 @@ pinned: false
 homepage: false
 ---
 
-DearMEP was used to support the campaign for a strong EU Supply Chain Directive. The Initiative Lieferkettengesetz organizes citizens to call their MEPs and advocate for corporate accountability in global supply chains, preventing the weakening of proposed legislation on human rights and environmental responsibilities.
+DearMEP was used to support the campaign for a strong Corporate Sustainability Due Diligence EU Directive. The Initiative Lieferkettengesetz by Oxfam Germany and EKO.org organized citizens to call their MEPs and advocate for corporate accountability in global supply chains, preventing the weakening of proposed legislation on human rights and environmental responsibilities.
 
 ## Integrations
 {{< bs-row >}}
